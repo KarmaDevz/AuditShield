@@ -1,0 +1,87 @@
+[versions]
+# Android
+compileSdk = "36"
+minSdk = "26"
+targetSdk = "36"
+
+# Kotlin
+kotlin = "2.0.21"
+composeCompiler = "1.5.14"
+coroutines = "1.8.0"
+
+# Android
+activityCompose = "1.9.2"
+coreKtx = "1.13.1"
+lifecycleRuntimeKtx = "2.8.0"
+androidGradlePlugin = "8.13.1"
+
+# Compose
+composeBom = "2024.10.00"
+material3 = "1.2.1"
+navigationCompose = "2.8.1"
+lifecycleViewModelCompose = "2.8.0"
+
+# Room
+room = "2.6.1"
+
+# Charts
+yCharts = "2.1.0"
+
+# Hilt
+hilt = "2.51.1"
+hiltNavigationCompose = "1.2.0"
+firebaseFirestoreKtx = "26.0.2"
+
+[libraries]
+# Android
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
+androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
+
+# Compose BOM
+compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
+
+# Compose
+compose-ui = { module = "androidx.compose.ui:ui" }
+compose-ui-graphics = { module = "androidx.compose.ui:ui-graphics" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "material3" }
+compose-material-icons-extended = { module = "androidx.compose.material:material-icons-extended" }
+
+# Navigation
+navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
+
+# ViewModel
+lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleViewModelCompose" }
+
+# Room
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+
+# Coroutines
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+
+# Charts
+yCharts = { module = "co.yml:ycharts", version.ref = "yCharts" }
+
+# Hilt
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
+androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
+
+# Testing
+junit = "junit:junit:4.13.2"
+androidx-test-ext-junit = "androidx.test.ext:junit:1.1.5"
+androidx-test-espresso-core = "androidx.test.espresso:espresso-core:3.5.1"
+compose-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+androidLibrary = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlinCompose = { id = "org.jetbrains.kotlin.plugin.compose", version = "2.0.21" }
+kotlinKapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+hiltAndroid = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
